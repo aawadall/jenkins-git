@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('Pre-Build') {
+            steps {
+                sh 'echo "Pre-Build"'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
