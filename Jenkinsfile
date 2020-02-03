@@ -4,7 +4,7 @@ pipeline {
         stage('Pre-Build') {
             steps {
                 sh 'echo "Pre-Build"'
-                sh 'ls -l'
+                sh 'dotnet restore'
             }
         }
         stage('Build') {
